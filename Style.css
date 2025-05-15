@@ -1,0 +1,17 @@
+body{
+    background-color: grey;
+}
+.hex-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+  }
+
+  .circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%;
+  }

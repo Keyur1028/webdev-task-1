@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Webdev 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="circles.css">
+</head>
+<body>
+  <h1 style="color: white; text-align: center;">Titans Circuit</h1>
+  
+  <!---->
+  <div class="player-info">
+    <div class="player red">
+      <div id="redIndicator" class="player-indicator active">Red Player</div>
+      <div class="score">Score: <span id="redScore">0</span></div>
+    </div>
+    <div id="phaseIndicator" class="phase-indicator">Phase: Placement</div>
+    <div class="player blue">
+      <div id="blueIndicator" class="player-indicator">Blue Player</div>
+      <div class="score">Score: <span id="blueScore">0</span></div>
+    </div>
+  </div>
+
+  <div class="icon-row">
+    <img id="Pause" src="/Webdev Task/Images/Resume.png" onclick="Pause()">
+    <img id="Resume" src="/Webdev Task/Images/Play.png" onclick="Resume()">
+    <img id="Redo" src="/Webdev Task/Images/Redo.png" onclick="Redo()">
+  </div>
+  <div id="gameboard">
+    <!-- Hexagon 1 (inner) edges -->
+    <div class="line" id="line1"></div>
+    <div class="line" id="line2"></div>
+    <div class="line" id="line3"></div>
+    <div class="line" id="line4"></div>
+    <div class="line" id="line5"></div>
+    <div class="line" id="line6"></div>
+    <!-- Hexagon 2 (middle) edges -->
+    <div class="line" id="line7"></div>
+    <div class="line" id="line8"></div>
+    <div class="line" id="line9"></div>
+    <div class="line" id="line10"></div>
+    <div class="line" id="line11"></div>
+    <div class="line" id="line12"></div>
+    <!-- Hexagon 3 (outer) edges -->
+    <div class="line" id="line13"></div>
+    <div class="line" id="line14"></div>
+    <div class="line" id="line15"></div>
+    <div class="line" id="line16"></div>
+    <div class="line" id="line17"></div>
+    <div class="line" id="line18"></div>
+    <!-- Radial lines -->
+    <div class="radial" id="radial1"></div>
+    <div class="radial" id="radial2"></div>
+    <div class="radial" id="radial3"></div>
+    <div class="radial" id="radial4"></div>
+    <div class="radial" id="radial5"></div>
+    <div class="radial" id="radial6"></div>
+    <!-- Circles -->
+    <div id="circle1" class="circle">1</div>
+    <div id="circle2" class="circle">2</div>
+    <div id="circle3" class="circle">3</div>
+    <div id="circle4" class="circle">4</div>
+    <div id="circle5" class="circle">5</div>
+    <div id="circle6" class="circle">6</div>
+    <div id="circle7" class="circle">7</div>
+    <div id="circle8" class="circle">8</div>
+    <div id="circle9" class="circle">9</div>
+    <div id="circle10" class="circle">10</div>
+    <div id="circle11" class="circle">11</div>
+    <div id="circle12" class="circle">12</div>
+    <div id="circle13" class="circle">13</div>
+    <div id="circle14" class="circle">14</div>
+    <div id="circle15" class="circle">15</div>
+    <div id="circle16" class="circle">16</div>
+    <div id="circle17" class="circle">17</div>
+    <div id="circle18" class="circle">18</div>
+    <!--ring0 edge values-->
+    <p id="val1" class="value"; style="position: absolute;left: 330px; top: 200px;">8</p>
+    <p id="val2" class="value"; style="position: absolute;left: 370.6px; top: 250px;"">8</p>
+    <p id="val3" class="value"; style="position: absolute;left: 216.6px; top: 250px;">8</p>
+    <p id="val4" class="value"; style="position: absolute;left: 330px; top: 320px;">9</p>
+    <p id="val5" class="value"; style="position: absolute;left: 250px; top: 200px;">9</p>
+    <p id="val6" class="value"; style="position: absolute;left: 250px; top: 320px;">8</p>
+    <!--ring1 edge values-->
+    <p id="val7" class="value"; style="position: absolute;left: 380px; top: 124.2px;">6</p>
+    <p id="val8" class="value"; style="position: absolute;left: 380px; top: 393.2px;">5</p>
+    <p id="val9" class="value"; style="position: absolute;left: 458.6px; top: 250px;">4</p>
+    <p id="val10" class="value"; style="position: absolute;left: 130.6px; top: 250px;">4</p>
+    <p id="val11" class="value"; style="position: absolute;left: 220px; top: 123.2px;">5</p>
+    <p id="val12" class="value"; style="position: absolute;left: 220px; top: 393.2px;">6</p>
+    <!--ring2 edge values-->
+    <p id="val13" class="value"; style="position: absolute; left: 545px; top: 250px;">2</p>
+    <p id="val14" class="value"; style="position: absolute;left: 45px; top: 250px;">3</p>
+    <p id="val15" class="value"; style="position: absolute;left: 190px; top: 37px;">2</p>
+    <p id="val16" class="value"; style="position: absolute;left: 190px; top: 480px;">1</p>
+    <p id="val17" class="value"; style="position: absolute;left: 400px; top: 480px;">1</p>
+    <p id="val18" class="value"; style="position: absolute;left: 400px; top: 37px;">1</p>
+    <!--radial edge values-->
+    <p id="val19" class="value"; style="position: absolute;left: 310px; top: 120px;">1</p>
+    <p id="val20" class="value"; style="position: absolute;left: 310px;top: 500px;">1</p>
+    <p id="val21" class="value"; style="position: absolute;left: 80px; top: 150px;">1</p>
+    <p id="val22" class="value"; style="position: absolute;left: 415px; top: 343.2px;">1</p>
+    <p id="val23" class="value"; style="position: absolute;left: 180px; top: 343.2px;">1</p>
+    <p id="val24" class="value"; style="position: absolute;left: 515px; top: 150px;">1</p>
+  </div>
+  <div class="timerbox">
+    <div class="timers-row">
+      <div class="side red">
+        <span id="redtime">120</span>
+      </div>
+      <div class="side blue">
+        <span id="bluetime">120</span>
+      </div>
+    </div>
+    <div class="countdown" id="countdown">30</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

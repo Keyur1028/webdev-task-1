@@ -1,0 +1,48 @@
+
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+  border: 3px solid #fff;
+  z-index: 2;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  background-color: #45a049;
+}
+
+/* Hexagon math: flat-top, center at (300, 300) */
+/* Inner hexagon (radius 100px) */
+#circle1  { left: 300px; top: 200px; transform: translate(-50%, -50%); }
+#circle2  { left: 386.6px; top: 250px; transform: translate(-50%, -50%); }
+#circle3  { left: 386.6px; top: 350px; transform: translate(-50%, -50%); }
+#circle4  { left: 300px; top: 400px; transform: translate(-50%, -50%); }
+#circle5  { left: 213.4px; top: 350px; transform: translate(-50%, -50%); }
+#circle6  { left: 213.4px; top: 250px; transform: translate(-50%, -50%); }
+
+/* Middle hexagon (radius 200px) */
+#circle7  { left: 300px; top: 100px; transform: translate(-50%, -50%); }
+#circle8  { left: 473.2px; top: 200px; transform: translate(-50%, -50%); }
+#circle9  { left: 473.2px; top: 400px; transform: translate(-50%, -50%); }
+#circle10 { left: 300px; top: 500px; transform: translate(-50%, -50%); }
+#circle11 { left: 126.8px; top: 400px; transform: translate(-50%, -50%); }
+#circle12 { left: 126.8px; top: 200px; transform: translate(-50%, -50%); }
+
+/* Outer hexagon (radius 300px) */
+#circle13 { left: 300px; top: 0px; transform: translate(-50%, -50%); }
+#circle14 { left: 559.8px; top: 150px; transform: translate(-50%, -50%); }
+#circle15 { left: 559.8px; top: 450px; transform: translate(-50%, -50%); }
+#circle16 { left: 300px; top: 600px; transform: translate(-50%, -50%); }
+#circle17 { left: 40.2px; top: 450px; transform: translate(-50%, -50%); }
+#circle18 { left: 40.2px; top: 150px; transform: translate(-50%, -50%); }
